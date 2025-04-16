@@ -21,10 +21,7 @@ public class SpaceController : MonoBehaviour
 
         StartShooting();
     }
-    /// <summary>
-    /// This line is testing git 
-    /// </summary>
-    // Update is called once per frame
+    
     void Update()
     {
         SpaceInput();
