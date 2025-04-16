@@ -21,7 +21,9 @@ public class SpaceController : MonoBehaviour
 
         StartShooting();
     }
-
+    /// <summary>
+    /// This line is testing git 
+    /// </summary>
     // Update is called once per frame
     void Update()
     {
@@ -43,8 +45,8 @@ public class SpaceController : MonoBehaviour
         float moveY = Input.GetAxis("Vertical");
         float moveX = Input.GetAxis("Horizontal");
         shipMovement = new Vector2(moveX, moveY).normalized;
-
-        /*if (Input.GetKeyDown(KeyCode.H))
+    
+        /*if (Input.GetKeyDown(KeyCode.H))  
             ConcreteFactoryHealth.GetPowerUp(new Vector3(0, 0, 0));*/
     }
 
