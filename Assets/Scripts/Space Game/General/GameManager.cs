@@ -8,8 +8,6 @@ using UnityEditor;
 public class GameManager : MonoBehaviour
 {
     #region Component
-    public List<GameObject> enemyPrefabs;
-    //public List<GameObject> healthPrefabs;
     public static GameManager Instance { get; private set; }
 
     [Header("UI")]
@@ -50,7 +48,6 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
-        StartCoroutine(SpawnEnemy());
         //StartCoroutine(SpawnHealth());
         HealthCount(healthLeft);
 
@@ -154,15 +151,4 @@ public class GameManager : MonoBehaviour
        
     }
     #endregion
-
-    IEnumerator SpawnEnemy()
-    {
-        while (isGameActive)
-        {
-            yield return new WaitForSeconds(3);
-            int enemyIndex = Random.Range(0, enemyPrefabs.Count);
-            Instantiate(enemyPrefabs[enemyIndex]);
-        }
-    }
-
 }

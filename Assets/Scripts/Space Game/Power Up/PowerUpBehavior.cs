@@ -15,10 +15,10 @@ public class PowerUpBehavior : MonoBehaviour
     private void Start()
     {
         //Start to Spawn Random Power Up
-        StartCoroutine(nameof(RandomPowerUp));
+        StartCoroutine(nameof(SpawnRandomPowerUp));
     }
 
-    private IEnumerator RandomPowerUp()
+    private IEnumerator SpawnRandomPowerUp()
     {
         while (GameManager.Instance.isGameActive)
         {
